@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:school_lab/constants/styles.dart';
-import 'screens/sign_in.dart';
-import 'screens/sign_up.dart';
+import 'login_screen.dart';
+import 'cart_screen.dart';
+import 'splash_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -13,15 +13,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Auth Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        scaffoldBackgroundColor: AppColors.background,
-      ),
-      initialRoute: '/signin',
+      title: 'Cửa hàng đơn giản',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      initialRoute: '/',
       routes: {
-        '/signin': (context) => const SignInScreen(),
-        '/signup': (context) => const SignUpScreen(),
+        '/': (context) => SplashScreen(),
+        '/login': (context) => LoginScreen(),
+        '/cart': (context) => CartScreen(),
       },
     );
   }
