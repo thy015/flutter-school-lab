@@ -1,26 +1,16 @@
 import 'package:flutter/material.dart';
-import 'login_screen.dart';
-import 'cart_screen.dart';
-import 'splash_screen.dart';
+import 'screens/game_filter_screen.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(GameFilterApp());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class GameFilterApp extends StatelessWidget {
+  const GameFilterApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Cửa hàng đơn giản',
-      theme: ThemeData(primarySwatch: Colors.blue),
-      initialRoute: '/',
-      routes: {
-        '/': (context) => SplashScreen(),
-        '/login': (context) => LoginScreen(),
-        '/cart': (context) => CartScreen(),
-      },
+      title: 'MMOBomb Games',
+      home: GameFilterScreen(),
     );
   }
 }
