@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'screens/game_filter_screen.dart';
 
-void main() => runApp(GameFilterApp());
+void main() => runApp(const GameFilterApp());
 
 class GameFilterApp extends StatelessWidget {
   const GameFilterApp({super.key});
@@ -10,7 +10,8 @@ class GameFilterApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'MMOBomb Games',
-      home: GameFilterScreen(),
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: const GameFilterScreen(),
     );
   }
 }
